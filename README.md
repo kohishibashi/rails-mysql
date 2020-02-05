@@ -28,7 +28,9 @@ git remote set-url origin [変更先のURL]
 2. docker-compose.ymlというファイル置いてあるディレクトリに移動
 3. コマンド`docker-compose build`
 4. コマンド`docker-compose up -d`
-5. ブラウザで`localhost:5000`とURL欄に入力すればアプリにアクセスできる
+5. アプリで使うDBを作成。webのコンテナにはいる。`docker container exec -it rails-docker_web_1 bash`と入力する
+6. `app_name# rails db:create`で作成後 `app_name# exit`で抜ける
+7. ブラウザで`localhost:3000`とURL欄に入力すればアプリにアクセスできる
 
 ## rails でコマンド使いたい時
 
